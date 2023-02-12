@@ -1,15 +1,5 @@
 <template>
     <form class="search-group">
-      <v-btn
-        color="secondary"
-        class="mr-3"
-        dark
-        small
-        title="New Card"
-        @click="addNewCard"
-      >
-        <v-icon>mdi-plus</v-icon>
-      </v-btn>
       <input class="search-bar" type="text" placeholder="Search">
       <v-btn
         class="ml-1"
@@ -24,9 +14,8 @@
   <script>
   export default {
     name: 'SearchBar',
-    methods: {
-      addNewCard () {
-      }
+    props: {
+      addNewCard: Function
     }
   }
   </script>
@@ -37,7 +26,6 @@
     display: flex;
     align-items: center;
     font-family: "Prompt", sans-serif;
-    margin-bottom: 50px;
   }
   
   .search-bar {
