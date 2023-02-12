@@ -3,7 +3,6 @@
     <app-error-dialog :show="showErrorMessage" :message="errorMessage" @close="closeErrorDialog" />
     <app-snackbar />
     <VApp :theme="theme">
-      <app-nav-bar :theme="theme" @theme-click="onThemeClick"></app-nav-bar>
       <VMain>
         <RouterView />
       </VMain>
@@ -28,7 +27,6 @@ import { useAppStore } from "@/stores/appStore"
 import { useAccountsStore } from "@/stores/accountsStore"
 import AppSnackbar from "@/components/AppSnackbar.vue"
 import AppErrorDialog from "@/components/AppErrorDialog.vue"
-import AppNavBar from "@/components/AppNavBar.vue"
 import AppFooter from "@/components/AppFooter.vue"
 
 export default {
@@ -36,7 +34,6 @@ export default {
   components: {
     AppSnackbar,
     AppErrorDialog,
-    AppNavBar,
     AppFooter,
   },
   setup() {
