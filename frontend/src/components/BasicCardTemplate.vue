@@ -20,7 +20,30 @@
         >
           <v-icon>mdi-close</v-icon>
         </v-btn>
-        
+        <v-overlay
+          class="overlay-message"
+          :absolute="absolute"
+          :value="overlay"
+        >
+          <div class="card-overlay pa-5">
+            <p>Are you sure you want to delete this card and all of its contents?</p>
+            <v-btn
+              color="accent"
+              @click="overlay = false"
+            >
+              Delete
+              <v-icon>mdi-check</v-icon>
+            </v-btn>
+            <v-btn
+              class="ml-3"
+              color="secondary"
+              @click="overlay = false"
+            >
+              Cancel
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </div>
+        </v-overlay>
       </v-row>
       <v-spacer />
       <v-textarea
