@@ -1,16 +1,16 @@
 // Composables
 import DefaultLayout from "@/layouts/default/DefaultLayout.vue"
-import TaskListView from "@/views/tasks/TaskListView.vue"
+import CardsListView from "@/views/cards/CardsListView.vue"
 
 export default [
   {
-    path: "/tasks",
+    path: "/cards",
     component: DefaultLayout,
     children: [
       {
         path: "list",
-        name: "tasks-list",
-        component: TaskListView,
+        name: "cards-list",
+        component: CardsListView,
       },
     ],
   },
