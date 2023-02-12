@@ -2,8 +2,7 @@
   <v-app>
     <div class="container-home d-flex">
       <LateralMenu />
-      <div class="content-area">
-        <SearchBar />
+      <div class="content-area pt-1 pl-6">
         <CardsContainer />
       </div>
     </div>
@@ -12,7 +11,6 @@
   
 <script>
   import CardsContainer from '@/components/CardsContainer.vue'
-  import SearchBar from '@/components/SearchBar.vue'
   import LateralMenu from '@/components/LateralMenu.vue'
   
   export default {
@@ -20,7 +18,6 @@
   
     components: {
       LateralMenu,
-      SearchBar,
       CardsContainer
     },
   }
@@ -34,7 +31,6 @@
   }
 
   .content-area {
-    padding: 30px 0 0 60px;
     width: 100%;
   }
 </style>
