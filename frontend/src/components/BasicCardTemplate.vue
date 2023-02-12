@@ -21,14 +21,13 @@
         <v-icon>mdi-close</v-icon>
       </v-btn>
       <v-overlay
-        class="overlay-message"
-        :absolute="absolute"
-        :value="overlay"
+        v-model="overlay"
+        class="align-center justify-center overlay-message"
       >
         <div class="card-overlay pa-5">
-          <p>Are you sure you want to delete this card and all of its contents?</p>
+          <p class="mb-3">Are you sure you want to delete this card and all of its contents?</p>
           <v-btn
-            color="accent"
+            color="info"
             @click="overlay = false"
           >
             Delete
@@ -94,7 +93,6 @@ export default {
     chosenColor: '#2dc391',
     editingCard: true,
     disabled: false,
-    absolute: true,
     overlay: false
   }),
   methods: {
@@ -132,7 +130,7 @@ export default {
 .card-overlay {
   min-width: 200px;
   max-width: 300px;
-  background-color: #1c3040d7;
+  background-color: #1c3040;
   border-radius: 10px;
 }
 
