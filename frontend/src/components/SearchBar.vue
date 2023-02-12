@@ -4,7 +4,6 @@
         color="secondary"
         class="mr-3"
         dark
-        fab
         small
         title="New Card"
         @click="addNewCard"
