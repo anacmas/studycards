@@ -1,11 +1,13 @@
 <template>
-    <v-row class="container-home background-color">
+  <v-app>
+    <div class="container-home d-flex">
       <LateralMenu />
-      <v-col class="content-area">
+      <div class="content-area">
         <SearchBar />
         <CardsContainer />
-      </v-col>
-    </v-row>
+      </div>
+    </div>
+  </v-app>
 </template>
   
 <script>
@@ -26,15 +28,14 @@
   
 <style scoped>
   
-  .container {
+  .container-home {
+    background-color: #001628;
     margin: 0;
   }
-  
-  .background-color {
-    background-color: #001628;
-  }
+
   .content-area {
     padding: 30px 0 0 60px;
+    width: 100%;
   }
 </style>
   
