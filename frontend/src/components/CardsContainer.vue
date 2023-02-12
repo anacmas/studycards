@@ -1,6 +1,6 @@
 <template>
-    <v-container class="primary">
-      <nav class="search-bar">
+    <v-container class="primary container-cards">
+      <nav>
         <BasicCardTemplate />
       </nav>
     </v-container>
@@ -17,3 +17,9 @@
   }
   </script>
   
+<style scoped>
+.container-cards {
+  width: 100%;
+  margin-left: 0;
+}
+</style>
