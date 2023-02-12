@@ -1,6 +1,5 @@
 <template>
-  <v-app>
-    <v-col class="container-column background-color">
+    <v-col class="container-column primary">
       <v-card height="100vh" width="256px">
         <v-navigation-drawer absolute permanent left class="primary pt-6">
           <template v-slot:prepend>
@@ -43,22 +42,21 @@
           <v-divider class="lightteal" />
 
           <v-list dense class="ml-3">
-            <div class="d-flex justify-center">
-              <h1 class="menu-title lightteal--text font-weight-bold">
+            <div class="d-flex justify-center align-center">
+              <h1 class="menu-title font-weight-bold">
                 Card List
               </h1>
               <v-btn
                 color="secondary"
                 class="mr-3 add-subject-btn"
                 dark
-                rounded
                 icon
                 title="New Subject"
               >
-                <v-icon>mdi-plus</v-icon>
+                <v-icon class="secondary">mdi-plus</v-icon>
               </v-btn>
             </div>
-            <v-list-item @click="iconRight = !iconRight" v-for="item in items" :key="item.title">
+            <v-list-item class="subject-list" @click="iconRight = !iconRight" v-for="item in items" :key="item.title">
               <v-list-item-icon>
                 <v-icon v-if="iconRight">
                   mdi-arrow-right-drop-circle
@@ -76,7 +74,6 @@
         </v-navigation-drawer>
       </v-card>
     </v-col>
-  </v-app>
 </template>
 
 <script>
@@ -102,11 +99,10 @@ export default {
 
 .container-column {
   padding: 0;
-}
-
-.background-color {
+  width: 296px;
   background-color: #001628;
 }
+
 .menu-expander {
   height: 100vh;
   width: 50px;
@@ -114,6 +110,11 @@ export default {
 .name {
   font-size: 18px;
   font-family: "Prompt", sans-serif;
+}
+
+.subject-list {
+  width: 100px;
+  margin-right: 0;
 }
 
 .menu-title {
