@@ -8,6 +8,7 @@
       </v-col>
 
       <v-col cols="12">
+        <lateral-menu />
         <task-form :form-label="'Nova Tarefa'" @new-task="addNewTask" />
       </v-col>
 
@@ -23,10 +24,11 @@ import { useAppStore } from "@/stores/appStore"
 import TasksApi from "@/api/tasks.api.js"
 import Task from "@/components/Task.vue"
 import TaskForm from "@/components/TaskForm.vue"
+import LateralMenu from "@/components/LateralMenu.vue"
 
 export default {
   name: "TasksList",
-  components: { Task, TaskForm },
+  components: { Task, TaskForm, LateralMenu },
   setup() {
     const appStore = useAppStore()
     return { appStore }
