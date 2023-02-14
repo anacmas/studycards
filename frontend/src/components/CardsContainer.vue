@@ -19,17 +19,17 @@
     </v-container>
   </template>
   
-  <script>
-  import BasicCardTemplate from './BasicCardTemplate'
+<script>
+import BasicCardTemplate from './BasicCardTemplate'
 import SearchBar from './SearchBar.vue';
   
-  export default {
-    name: 'CardsContainer',
-    components: {
-    BasicCardTemplate,
-    SearchBar
-}
+export default {
+  name: 'CardsContainer',
+  components: {
+  BasicCardTemplate,
+  SearchBar
   }
+}
   </script>
   
 <style scoped>
