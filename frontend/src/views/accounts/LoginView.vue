@@ -25,7 +25,7 @@
             block
             size="large"
             rounded="pill"
-            color="primary"
+            color="#263238"
             append-icon="mdi-chevron-right"
             @click="login">
             Login
@@ -35,7 +35,7 @@
             block
             size="large"
             rounded="pill"
-            color="primary"
+            color="#263238"
             variant="outlined"
             :to="{ name: 'base-home' }">
             Início
