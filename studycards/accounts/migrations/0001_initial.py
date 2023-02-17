@@ -4,7 +4,6 @@ from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
 
-
 class Migration(migrations.Migration):
 
     initial = True
@@ -21,6 +20,24 @@ class Migration(migrations.Migration):
                 ('bio', models.TextField(blank=True, null=True)),
                 ('avatar', models.URLField(blank=True, max_length=1024, null=True)),
                 ('user', models.OneToOneField(null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Subject',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(blank=False, max_length=40)),
+                ('user', models.OneToOneField(null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Cards',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(blank=False, max_length=40)),
+                ('content', models.TextField(blank=True, max_length=2024, null=True)),
+                ('color', models.CharField(blank=False, max_length=10)),
+                ('subject', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="accounts.subject")),
             ],
         ),
     ]
